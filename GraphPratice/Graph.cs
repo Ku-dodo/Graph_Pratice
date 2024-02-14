@@ -7,6 +7,7 @@ intGraph.AddNode(4, new Node<int>(4));
 intGraph.AddNode(5, new Node<int>(2));
 intGraph.AddNode(6, new Node<int>(5));
 intGraph.AddNode(7, new Node<int>(2));
+intGraph.AddNode(8, new Node<int>(2));
 
 intGraph.LinkNode(0, 1);
 intGraph.LinkNode(0, 2);
@@ -14,6 +15,7 @@ intGraph.LinkNode(1, 3);
 intGraph.LinkNode(1, 6);
 intGraph.LinkNode(2, 4);
 intGraph.LinkNode(2, 5);
+intGraph.LinkNode(3, 8);
 intGraph.PairNode(5, 7);
 intGraph.LinkNode(7, 4);
 Console.WriteLine("-----------DFS Start-----------");

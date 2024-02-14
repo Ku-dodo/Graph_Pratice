@@ -1,6 +1,6 @@
 ﻿public class Node<T>
 {
-    public int KeyIndex { get; private set; }
+    public int Index { get; private set; }
     public T Data { get; private set; }
     public List<Node<T>> Adjacent = new List<Node<T>>();
 
@@ -9,9 +9,9 @@
         Data = data;
     }
 
-    public void SetKey(int uniqueKey)
+    public void SetKey(int index)
     {
-        KeyIndex = uniqueKey;
+        Index = index;
     }
 
     public void SetData(T data)

@@ -10,12 +10,12 @@ public partial class Gragh<T>
     private void DFSUtil(int index, bool[] visited)
     {
         visited[index] = true;
-        Console.WriteLine($"visit index : {NodeDictionary[index].KeyIndex} true");
+        Console.WriteLine($"visit index : {NodeDictionary[index].Index} true");
         foreach (var node in NodeDictionary[index].Adjacent)
         {
-            if (!visited[node.KeyIndex]) DFSUtil(node.KeyIndex, visited);
+            if (!visited[node.Index]) DFSUtil(node.Index, visited);
 
-            else Console.WriteLine($"visit index : {node.KeyIndex} ignore");
+            else Console.WriteLine($"visit index : {node.Index} ignore");
         }
     }
 
@@ -34,14 +34,14 @@ public partial class Gragh<T>
             {
                 foreach (var node in NodeDictionary[index].Adjacent)
                 {
-                    queue.Enqueue(node.KeyIndex);
+                    queue.Enqueue(node.Index);
                 }
                 visited[index] = true;
-                Console.WriteLine($"visit index : {NodeDictionary[index].KeyIndex} true");
+                Console.WriteLine($"visit index : {NodeDictionary[index].Index} true");
             }
             else
             {
-                Console.WriteLine($"visit index : {NodeDictionary[index].KeyIndex} ignore");
+                Console.WriteLine($"visit index : {NodeDictionary[index].Index} ignore");
             }
         }
     }
